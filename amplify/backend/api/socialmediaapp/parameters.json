@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "socialmediaapp",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authsocialmediaapp20d35be1",
+            "Outputs.UserPoolId"
+        ]
+    }
+}
