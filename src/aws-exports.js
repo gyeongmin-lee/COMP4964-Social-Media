@@ -14,6 +14,8 @@ const awsmobile = {
     "oauth": {},
     "aws_user_files_s3_bucket": "socialmediaappfc9c9c2a2621401faa926b241321573d33526-dev",
     "aws_user_files_s3_bucket_region": "us-west-2",
+    "aws_mobile_analytics_app_id": "1ed59e0e8efc4ab5b1cc03c668e27397",
+    "aws_mobile_analytics_app_region": "us-west-2",
     "predictions": {
         "identify": {
             "identifyLabels": {

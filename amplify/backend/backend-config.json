@@ -52,5 +52,11 @@
       "type": "cicd",
       "lastPushTimeStamp": "2020-11-18T08:37:31.816Z"
     }
+  },
+  "analytics": {
+    "socialmediaapp": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

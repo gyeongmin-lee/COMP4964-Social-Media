@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/css";
 import { useParams } from "react-router-dom";
-import { API, Predictions, Storage } from "aws-amplify";
+import { API, Predictions, Storage, Analytics } from "aws-amplify";
 import { getPost } from "./graphql/queries";
 
 export default function Post() {
@@ -10,7 +10,14 @@ export default function Post() {
   const [tags, updateTags] = useState(null);
   const { id } = useParams();
 
-  console.log(tags);
+  useEffect(() => {
+    if (post !== null) {
+      Analytics.record({
+        name: "albumVisit",
+        attributes: { postId: post.id, location: post.location },
+      });
+    }
+  }, [post]);
 
   useEffect(() => {
     const getLabels = async () => {
