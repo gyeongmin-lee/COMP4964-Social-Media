@@ -24,7 +24,6 @@ function Router() {
         query: listPosts,
         variables: { limit: 100 },
       });
-      console.log(postData);
       let postsArray = postData.data.listPosts.items;
       /* map over the image keys in the posts array, get signed image URLs for each image */
       postsArray = await Promise.all(

@@ -71,11 +71,11 @@ export default function CreatePost({
         variables: { input: postInfo },
         authMode: "AMAZON_COGNITO_USER_POOLS", // updated
       });
-      const { username } = await Auth.currentAuthenticatedUser(); // new
+      const { username } = await Auth.currentAuthenticatedUser();
       updatePosts([
         ...posts,
         { ...postInfo, image: formState.file, owner: username },
-      ]); // updated
+      ]);
       updateFormState((currentState) => ({ ...currentState, isSaving: false }));
       updateOverlayVisibility(false);
     } catch (err) {
